@@ -56,7 +56,7 @@ var Node = function(value) {
 var linkedList = new LinkedList();
 
 /*
- * Complexity: What is the time complexity of the above functions?
+ * Complexity: What is the time complexity of the above functions? constant
  */
 // A linkedList class, in functional style, with the following properties:
 //  .head property, a linkedListNode instance

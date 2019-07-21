@@ -16,12 +16,12 @@ var LimitedArray = function(limit) {
 
   var limitedArray = {};
   limitedArray.get = function(index) {
-    checkLimit(index);
-    return storage[index];
+    checkLimit(index); //makes sure index is not over the length of array(the limit)
+    return storage[index];//return value at the index
   };
   limitedArray.set = function(index, value) {
     checkLimit(index);
-    storage[index] = value;
+    storage[index] = value;//sets arr at i to value
   };
   limitedArray.each = function(callback) {
     for (var i = 0; i < storage.length; i++) {
@@ -47,7 +47,7 @@ var LimitedArray = function(limit) {
 var getIndexBelowMaxForKey = function(str, max) {
   var hash = 0;
   for (var i = 0; i < str.length; i++) {
-    hash = (hash << 5) + hash + str.charCodeAt(i);
+    hash = (hash << 5) + hash + str.charCodeAt(i);//returns an integer between 0 and 65535 representing the UTF-16 code unit at the given index
     hash = hash & hash; // Convert to 32bit integer
     hash = Math.abs(hash);
   }

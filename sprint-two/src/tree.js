@@ -42,10 +42,7 @@ var extend = function(to, from) {
 
 var tree = new Tree();
 
-tree.addChild(5);
-tree.addChild(6);
-tree.children[0].addChild(7);
-tree.children[1].addChild(8);
+
 /*
  * Complexity: What is the time complexity of the above functions?
  */
@@ -53,6 +50,6 @@ tree.children[1].addChild(8);
 //  .children property, 
 //  .addChild() method, 
 //  A .contains() method, 
-//  What is the time complexity of the above functions?
+//  What is the time complexity of the above functions? linear
 
 
